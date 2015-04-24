@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8"/>
+		<link rel="stylesheet" href="estilo.css">
+		<title>Encomenda de Pedras</title>
+	</head>	
+	<body>	
+		<form name="POST" action="https://terrivel.herokuapp.com/monster" method="POST">
+			<fieldset id="post">
+				<legend>Dados da Encomenda (POST)</legend>
+				<p> 
+				<label for="nome">Dê um nome ao monstro: 
+				<input type="text" id="nome" maxlength="26" title="apenas letras, maiúsculas ou minúsculas" pattern="[a-zA-z]{1,26}" />  
+				</label>
+				</p>
+				<p>
+				<label for="num_pedras">Número de Pedras:
+				<input type="number" name="num_pedras" id="num_pedras" min="0" placeholder="3"/>  
+				</label>
+				</p>
+				<p>
+				<label for="tam_pedras">Tamanho das Pedras:
+				<input type="number" name="tam_pedras" id="tam_pedras" min="1" max="7" step="0.5"/>  
+				</label>
+				</p>
+				<p>				
+				<label for="corCeu1">Cor do Ceu 1:
+				<input type="color" name="corCeu1" id="num_pedras" /> 
+				</label>
+				</p>
+				<p>				
+				<label for="corCeu2">Cor do Ceu 2:
+				<input type="color" name="corCeu2"/> 
+				</label>
+				</p>
+				<p>
+				<label>Tipo de Pedra: </label>
+				<select name="tipo_pedras" id="tipo_pedras">
+					<option value="marroada"> Marroada </option>
+					<option value="ametista"> Ametista </option>
+					<option value="topazio">  Topazio  </option>
+					<option value="espinela"> Espinela </option>
+				</select>				
+				</p>
+				<p>		
+				<label>Pedras Sortidas: </label>
+				<input name="tipo_pedras_sortidas" id="tipo_pedras_sortidas" type="radio" value="sim"/>Sim
+				<input name="tipo_pedras_sortidas" id="tipo_pedras_sortidas" type="radio" value="nao"/>Não
+			    </p>
+			</fieldset>
+			<br>
+			<input type="submit" value="Enviar (POST)">			
+		   <br><br><br>
+		</form>
+		
+		
+		<form name="GET" action="https://terrivel.herokuapp.com/monster" method="GET">
+			<fieldset id="get">
+					<legend>Dados da Encomenda (GET)</legend>
+				<p> 
+				<label for="nome">Dê um nome ao monstro: </label>
+				<input type="text" id="nome" maxlength="26" title="apenas letras, maiúsculas ou minúsculas" pattern="[a-zA-z]{1,26}" >  
+				</p>
+				<p>
+				<label for="num_pedras">Número de Pedras:</label>
+				<input type="number" name="num_pedras" id="num_pedras" min="0" placeholder="3">  
+                </p>
+				<p>
+				<label for="tam_pedras">Tamanho das Pedras: </label>
+				<input type="number" name="tam_pedras" id="tam_pedras" min="1" max="7" step="0.5">  
+				</p>
+				<p>
+				<label for="corCeu1">Cor do Ceu 1: </label>
+				<input type="color" name="corCeu1" id="num_pedras" > 
+				</p>
+				<p>
+				<label for="corCeu2">Cor do Ceu 2: </label>
+				<input type="color" name="corCeu2"> 
+				</p>
+				<p> 
+				<label>Tipo de Pedra: </label>
+				<select name="tipo_pedras" id="tipo_pedras">
+					<option value="marroada"> Marroada </option>
+					<option value="ametista"> Ametista </option>
+					<option value="topazio">  Topazio  </option>
+					<option value="espinela"> Espinela </option>
+				</select>
+				</p>
+				<p>  				
+				<label>Pedras Sortidas: </label>				
+				<input name="tipo_pedras_sortidas" id="tipo_pedras_sortidas" type="radio" value="sim">Sim
+				<input name="tipo_pedras_sortidas" id="tipo_pedras_sortidas" type="radio" value="nao">Não
+			    </p>
+			</fieldset>		
+			<br>
+		    <input type="submit" value="Enviar (GET)">		
+		    <br><br><br>
+		</form>			
+	</body>	
+</html>
