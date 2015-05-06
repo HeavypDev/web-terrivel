@@ -6,12 +6,12 @@
 		<title>Encomenda de Pedras</title>
 	</head>	
 	<body>	
-		<form name="POST" action="https://terrivel.herokuapp.com/monster" method="POST">
+		<form name="POST" action="http://terrivel.herokuapp.com/monster" method="POST">
 			<fieldset id="post">
 				<legend>Dados da Encomenda (POST)</legend>
 				<p> 
 				<label for="nome">Dê um nome ao monstro: 
-				<input type="text" id="nome" maxlength="26" title="apenas letras, maiúsculas ou minúsculas" pattern="[a-zA-z]{1,26}" />  
+				<input type="text" name="nome" maxlength="26" title="apenas letras, maiúsculas ou minúsculas" pattern="[a-zA-z]{1,26}" />  
 				</label>
 				</p>
 				<p>
@@ -41,7 +41,7 @@
 					<option value="ametista"> Ametista </option>
 					<option value="topazio">  Topazio  </option>
 					<option value="espinela"> Espinela </option>
-				</select>				
+				</select>			
 				</p>
 				<p>		
 				<label>Pedras Sortidas: </label>
@@ -50,17 +50,18 @@
 			    </p>
 			</fieldset>
 			<br>
-			<input type="submit" value="Enviar (POST)">			
+			<input type="submit" value="Enviar (POST)">
+			<input type="reset" value="Limpar (POST)">			
 		   <br><br><br>
 		</form>
 		
 		
-		<form name="GET" action="https://terrivel.herokuapp.com/monster" method="GET">
+		<form name="GET" action="http://terrivel.herokuapp.com/monster" method="GET">
 			<fieldset id="get">
 					<legend>Dados da Encomenda (GET)</legend>
 				<p> 
 				<label for="nome">Dê um nome ao monstro: </label>
-				<input type="text" id="nome" maxlength="26" title="apenas letras, maiúsculas ou minúsculas" pattern="[a-zA-z]{1,26}" >  
+				<input type="text" name="nome" maxlength="26" title="apenas letras, maiúsculas ou minúsculas" pattern="[a-zA-z]{1,26}" >  
 				</p>
 				<p>
 				<label for="num_pedras">Número de Pedras:</label>
@@ -94,7 +95,8 @@
 			    </p>
 			</fieldset>		
 			<br>
-		    <input type="submit" value="Enviar (GET)">		
+		    <input type="submit" value="Enviar (GET)">
+			<input type="reset" value="Limpar (GET)">			
 		    <br><br><br>
 		</form>			
 	</body>	
